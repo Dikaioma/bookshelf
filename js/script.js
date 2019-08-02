@@ -87,12 +87,12 @@ var Bookshelf = [
         image: 'https://images-na.ssl-images-amazon.com/images/I/51Z1JgrcufL._SX290_BO1,204,203,200_.jpg',
         link: 'https://www.amazon.com/Collectors-Library-Melville-Herman-Hardcover/dp/B00IIB4C7U/ref=sr_1_2?keywords=moby+dick+collectors+library+hardcover&qid=1564782731&s=gateway&sr=8-2'
     },
-    // {
-    //     title: '',
-    //     author: '',
-    //     image: '',
-    //     link: ''
-    // },
+    {
+        title: 'Lubavitcher Rabbis Memoirs',
+        author: 'Yosef Yitzchok Schneersohn',
+        image: 'https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.com/Lubavitcher-Rabbis-Memoirs-2-Set/dp/0826606202/ref=sr_1_2?crid=KV4BTEYNEQLV&keywords=lubavitcher+rebbe+memoirs&qid=1564783394&s=gateway&sprefix=lubav%2Caps%2C130&sr=8-2'
+    },
     // {
     //     title: '',
     //     author: '',
