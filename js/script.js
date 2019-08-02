@@ -17,7 +17,7 @@ var Bookshelf = [
     },
     {
         title: 'The Hobbit and the Lord of the Rings',
-        author: 'J. R. R. Tolkien',
+        author: 'John Ronald Reul Tolkien',
         image: 'https://images-na.ssl-images-amazon.com/images/I/41thSfviRBL._BO1,204,203,200_.jpg',
         link: 'https://www.amazon.com/J-Tolkien-Tie-Fellowship-Paperback/dp/B01FODEHEM/ref=sr_1_9?keywords=J.R.R.+Tolkien+4-Book+Boxed+Set%3A+The+Hobbit+and+The+Lord+of+the+Rings&qid=1563539905&s=gateway&sr=8-9'
     },
@@ -105,6 +105,12 @@ var Bookshelf = [
     //     image: '',
     //     link: ''
     // },
+    // {
+    //     title: '',
+    //     author: '',
+    //     image: '',
+    //     link: ''
+    // },
 ];
 // '<a href="'+book.link+'" target="_blank"><i class="fab fa-ebay"></i></a>'+
 // <i class="fab fa-amazon"></i>
@@ -112,13 +118,13 @@ $( document ).ready(function() {
     var html = '';
     for(var i=0; i < Bookshelf.length; i++) {
         var book = Bookshelf[i];
-        html += '<div class="card d-inline-flex m-3">'+
-                    '<img class="card-img-top" src="'+book.image+'" width=100%>'+
+        html += '<div class="card d-inline-flex m-3 book">'+
+                    '<img class="card-img-top book-img" src="'+book.image+'" width=100%>'+
                     '<hr>'+
-                    '<div class="card-body">'+
-                        '<h5 class="card-title">'+book.title+'</h5>'+
-                        '<p class="card-text">'+book.author+'</p>'+
-                        '<a class="btn btn-primary" href="'+book.link+'" target="_blank">view</a>'+
+                    '<div class="card-body book-body">'+
+                        '<h5 class="card-title book-title">'+book.title+'</h5>'+
+                        '<p class="card-text author">'+book.author+'</p>'+
+                        '<a class="btn btn-primary book-link" href="'+book.link+'" target="_blank">view</a>'+
                     '</div>'+
                 '</div>';
     }
