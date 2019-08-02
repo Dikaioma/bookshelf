@@ -15,7 +15,7 @@ html, body {
     justify-content: center; */
     /* align-self: flex-start; */
 }
-.card {
+.book {
     border: 1px solid gray;
     padding: 10px;
     margin: 10px;
@@ -23,27 +23,32 @@ html, body {
     height: 415px;
     float: left;    
 }
-.card-text, .card-title {
+.author, .book-title {
     position: relative;
     height: 3rem;
     display: inline-block;
     overflow: hidden;
+    /* background: #223344; */
 }
-.card-text::after, .card-title::after {
+.author::after, .book-title::after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 300px;
     height: 25px;
-    background: linear-gradient(rgba(255, 255, 255, 0.001), white); /* transparent keyword is broken in Safari */
+    /* background: linear-gradient(rgba(255, 255, 255, 0.001), white); transparent keyword is broken in Safari */
+    /* background-image: radial-gradient(transparent, white); */
+    background: linear-gradient(#ffffff00, #ffffff);
 }
-
-.card-img-top {
+/* .btn {
+    display: unset;
+} */
+.book-img {
     display: block;
     width: auto;
     height: 200px;
     align-self: center;
 }
-i {
+/* i {
     margin-left: 5px;
-}
+} */
