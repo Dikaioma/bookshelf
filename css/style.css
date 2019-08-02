@@ -23,13 +23,13 @@ html, body {
     height: 415px;
     float: left;    
 }
-.card-title {
+.card-text, .card-title {
     position: relative;
     height: 3rem;
     display: inline-block;
     overflow: hidden;
 }
-.card-title::after {
+.card-text::after, .card-title::after {
     content: "";
     position: absolute;
     bottom: 0;
