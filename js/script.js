@@ -81,12 +81,12 @@ var Bookshelf = [
         image: 'https://images-na.ssl-images-amazon.com/images/I/51di-7uhYCL._SX328_BO1,204,203,200_.jpg',
         link: 'https://www.amazon.com/Seven-Wonders-Book-Legend-Rift/dp/0062070533/ref=sr_1_1?keywords=seven+wonders+book+4&qid=1564620178&s=gateway&sr=8-1'
     },
-    // {
-    //     title: '',
-    //     author: '',
-    //     image: '',
-    //     link: ''
-    // },
+    {
+        title: 'Moby Dick',
+        author: 'Herman Melville',
+        image: 'https://images-na.ssl-images-amazon.com/images/I/51Z1JgrcufL._SX290_BO1,204,203,200_.jpg',
+        link: 'https://www.amazon.com/Collectors-Library-Melville-Herman-Hardcover/dp/B00IIB4C7U/ref=sr_1_2?keywords=moby+dick+collectors+library+hardcover&qid=1564782731&s=gateway&sr=8-2'
+    },
     // {
     //     title: '',
     //     author: '',
