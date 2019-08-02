@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-align: center;
+}
+
+.bookshelf {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    /* align-content: space-around;
+    justify-content: center; */
+    /* align-self: flex-start; */
+}
+.card {
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    height: 415px;
+    float: left;    
+}
+.card-title {
+    position: relative;
+    height: 3rem;
+    display: inline-block;
+    overflow: hidden;
+}
+.card-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 25px;
+    background: linear-gradient(rgba(255, 255, 255, 0.001), white); /* transparent keyword is broken in Safari */
+}
+
+.card-img-top {
+    display: block;
+    width: auto;
+    height: 200px;
+    align-self: center;
+}
+i {
+    margin-left: 5px;
+}
