@@ -1,13 +1,3 @@
-/* 
-    <div class="card d-inline-flex m-3" title="">
-        <div class="card-img-top" style="background-image: url('')"></div>
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a href="" class="btn btn-primary">amazon</a>
-        </div>
-    </div>  
-*/
 var Bookshelf = [
     {
         title: 'Man\'s Search for Meaning',
@@ -114,33 +104,44 @@ var Bookshelf = [
 ];
 // '<a href="'+book.link+'" target="_blank"><i class="fab fa-ebay"></i></a>'+
 // <i class="fab fa-amazon"></i>
+// '<a class="btn btn-primary book-link" href="'+book.link+'" target="_blank">view</a>'+
 $( document ).ready(function() {
     var html = '';
     for(var i=0; i < Bookshelf.length; i++) {
         var book = Bookshelf[i];
-        html += '<div class="card d-inline-flex m-3 book">'+
+        html += '<div class="card column d-inline-flex m-3 book hover-shadow cursor" onclick="openModal();currentSlide('+Bookshelf[i]+')">'+
                     '<img class="card-img-top book-img" src="'+book.image+'" width=100%>'+
                     '<hr>'+
                     '<div class="card-body book-body">'+
                         '<h5 class="card-title book-title">'+book.title+'</h5>'+
                         '<p class="card-text author">'+book.author+'</p>'+
-                        '<a class="btn btn-primary book-link" href="'+book.link+'" target="_blank">view</a>'+
+                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">'+
+                            'Launch demo modal'+
+                        '</button>'+                    
                     '</div>'+
                 '</div>';
+                
+                
     }
-
+    var modal = '<div class="myModal modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">'+
+                    '<div class="modal-dialog" role="document">'+
+                        '<div class="modal-content">'+
+                            '<div class="modal-header">'+
+                                '<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>'+
+                                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+                                    '<span aria-hidden="true">&times;</span>'+
+                                '</button>'+
+                            '</div>'+
+                            '<div class="modal-body">'+
+                                '...'+
+                            '</div>'+
+                            '<div class="modal-footer">'+
+                                '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
+                                '<button type="button" class="btn btn-primary">Save changes</button>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>';
     $('.bookshelf').html(html);
     
-
 });
-
-// console.log(modal);
-// console.log(Bookshelf[0]);
-// var book = '<div>pizza</div>';
-// $('body').append('<div>pizza</div>');
-
-// var $newdiv1 = $( "<div id='object1'></div>" ),
-//     newdiv2 = document.createElement( "div" ),
-//     existingdiv1 = document.getElementById( "foo" );
- 
-// $( "body" ).append( $newdiv1, [ newdiv2, existingdiv1 ] );
