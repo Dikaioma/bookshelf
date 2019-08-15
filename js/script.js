@@ -109,39 +109,28 @@ $( document ).ready(function() {
     var html = '';
     for(var i=0; i < Bookshelf.length; i++) {
         var book = Bookshelf[i];
-        html += '<div class="card column d-inline-flex m-3 book hover-shadow cursor" onclick="openModal();currentSlide('+Bookshelf[i]+')">'+
+        html += '<div class="card column d-inline-flex m-3 book hover-shadow cursor">'+
                     '<img class="card-img-top book-img" src="'+book.image+'" width=100%>'+
                     '<hr>'+
                     '<div class="card-body book-body">'+
                         '<h5 class="card-title book-title">'+book.title+'</h5>'+
                         '<p class="card-text author">'+book.author+'</p>'+
-                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">'+
+                        '<button type="button" class="btn btn-primary">'+
                             'Launch demo modal'+
                         '</button>'+                    
                     '</div>'+
                 '</div>';
-                
+            
+        console.log(`${book.title}\n${book.author}\n${book.link}`);
                 
     }
-    var modal = '<div class="myModal modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">'+
-                    '<div class="modal-dialog" role="document">'+
-                        '<div class="modal-content">'+
-                            '<div class="modal-header">'+
-                                '<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>'+
-                                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
-                                    '<span aria-hidden="true">&times;</span>'+
-                                '</button>'+
-                            '</div>'+
-                            '<div class="modal-body">'+
-                                '...'+
-                            '</div>'+
-                            '<div class="modal-footer">'+
-                                '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
-                                '<button type="button" class="btn btn-primary">Save changes</button>'+
-                            '</div>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>';
-    $('.bookshelf').html(html);
     
+    $('.bookshelf').html(html);
+    $('.book').click(function() {
+        // alert( "Handler for .click() called." );
+        $('.modal').css('display', 'block');
+    });
+    $('.modal-content').html('<img src="https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg/>');
+    // $('.modal-content').html('<img src='+Bookshelf[i].image+'/>');
+    console.log(html);
 });
