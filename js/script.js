@@ -115,22 +115,23 @@ $( document ).ready(function() {
                     '<div class="card-body book-body">'+
                         '<h5 class="card-title book-title">'+book.title+'</h5>'+
                         '<p class="card-text author">'+book.author+'</p>'+
-                        '<button type="button" class="btn btn-primary">'+
+                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">'+
                             'Launch demo modal'+
-                        '</button>'+                    
+                        '</button>'+
                     '</div>'+
                 '</div>';
-            
+
         console.log(`${book.title}\n${book.author}\n${book.link}`);
-                
+
     }
-    
+
     $('.bookshelf').html(html);
     $('.book').click(function() {
         // alert( "Handler for .click() called." );
         $('.modal').css('display', 'block');
     });
-    $('.modal-content').html('<img src="https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg/>');
+
+    //$('.modal-content').html('<img src="https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg/>');
     // $('.modal-content').html('<img src='+Bookshelf[i].image+'/>');
     console.log(html);
 });
