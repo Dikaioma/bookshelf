@@ -130,6 +130,10 @@ $( document ).ready(function() {
         // alert( "Handler for .click() called." );
         $('.modal').css('display', 'block');
     });
+    $('.close').click(function() {
+        $('.modal').css('display', 'none');
+    });
+    $('.modal-body').html('<img src="'+book.image+'">');
 
     //$('.modal-content').html('<img src="https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg/>');
     // $('.modal-content').html('<img src='+Bookshelf[i].image+'/>');
