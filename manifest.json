@@ -1,0 +1,21 @@
+{
+  "short_name": "Bookshelf",
+  "name": "Bookshelf",
+  "icons": [
+    {
+      "src": "/images/books-clipart-bookshelf.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/books-clipart-bookshelf.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/bookshelf-v2/",
+  "background_color": "#999999",
+  "display": "standalone",
+  "scope": "/bookshelf-v2/",
+  "theme_color": "#999999"
+}
