@@ -105,37 +105,39 @@ var Bookshelf = [
 // '<a href="'+book.link+'" target="_blank"><i class="fab fa-ebay"></i></a>'+
 // <i class="fab fa-amazon"></i>
 // '<a class="btn btn-primary book-link" href="'+book.link+'" target="_blank">view</a>'+
+// onclick="changeImg(this)"
 $( document ).ready(function() {
     var html = '';
     for(var i=0; i < Bookshelf.length; i++) {
         var book = Bookshelf[i];
-        html += '<div class="card column d-inline-flex m-3 book hover-shadow cursor">'+
+        html += '<div class="book card column d-inline-flex m-3 hover-shadow cursor" data-bookindex="'+i+'">'+
                     '<img class="card-img-top book-img" src="'+book.image+'" width=100%>'+
                     '<hr>'+
                     '<div class="card-body book-body">'+
                         '<h5 class="card-title book-title">'+book.title+'</h5>'+
                         '<p class="card-text author">'+book.author+'</p>'+
-                        '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookModal">'+
-                            'Launch demo modal'+
-                        '</button>'+
                     '</div>'+
                 '</div>';
 
-        console.log(`${book.title}\n${book.author}\n${book.link}`);
+        // console.log(`${book.title}\n${book.author}\n${book.link}`);
 
     }
 
     $('.bookshelf').html(html);
-    $('.book').click(function() {
-        // alert( "Handler for .click() called." );
-        $('.modal').css('display', 'block');
+    $('.book').on('click', function(event) {
+        const target = $(event.currentTarget) // Button that triggered the modal
+        const bookIndex = target.data('bookindex');
+        const book = Bookshelf[bookIndex];
+        $('.modal-image').attr('src', book.image);
+        $('.modal-title').text(book.title);
+        $('.modal').modal({});
     });
     $('.close').click(function() {
         $('.modal').css('display', 'none');
     });
-    $('.modal-body').html('<img src="'+book.image+'">');
+    $('.modal').on('show.bs.modal', function (event) {
+        var target = $(event.relatedTarget) // Button that triggered the modal
 
-    //$('.modal-content').html('<img src="https://images-na.ssl-images-amazon.com/images/I/41xndYOoOSL._SX331_BO1,204,203,200_.jpg/>');
-    // $('.modal-content').html('<img src='+Bookshelf[i].image+'/>');
-    console.log(html);
+    });
+
 });
